@@ -1,0 +1,40 @@
+if you want to use spring security database
+
+then there must be two tables  with excat name and fields
+
+1)users
+username:VARCHAR(50)
+password:VARCHAR(50)
+enabled TINYINT(1)
+
+2)authorities
+username VARCHAR(50)
+authority VARCHAR(50)
+
+
+class Solution {
+
+    class pair{
+        int dif;
+        int pro;
+
+        public pair(int dif,int pro){
+            this.dif=dis;
+            this.pro=pro;
+        }
+    }
+
+    public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker) {
+        List<pair> list=new LinkedList<>();
+
+        for(int i=0;i<profit.length;i++){
+            list.add(new pair(difficulty[i],profit[i]));
+        }
+
+        Comparator.sort(list,(a,b)->a-b);
+        for(int i=0;i<list.size();i++){
+            System.out.println("dif: "+list.get(i).dif+" pro: "+list.get(i).pro);
+        }
+        return 0;
+    }
+}
